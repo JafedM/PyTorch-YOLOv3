@@ -73,11 +73,12 @@ def create_modules(module_defs: List[dict]) -> Tuple[dict, nn.ModuleList]:
                 modules.add_module(f"sigmoid_{module_i}", nn.Sigmoid())
             elif module_def["activation"] == "swish":
                 modules.add_module(f"swish_{module_i}", nn.SiLU())
+        
                 
         #Aqui agrego las mascaras
         elif module_def["type"] == "masksembles":
             N = int(module_def["N"])
-            s = module_def["s"]
+            s = float(module_def["s"])
             modules.add_module(
                 f"mask_{module_i}",
                 Masksembles2D(
