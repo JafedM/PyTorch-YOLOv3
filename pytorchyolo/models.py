@@ -9,8 +9,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from pytorchyolo.utils.parse_config import parse_model_config
-from pytorchyolo.utils.utils import weights_init_normal
+from utils.parse_config import parse_model_config
+from utils.utils import weights_init_normal
 
 
 def create_modules(module_defs: List[dict]) -> Tuple[dict, nn.ModuleList]:
