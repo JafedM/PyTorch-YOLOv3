@@ -1,6 +1,8 @@
 #!/bin/bash
 
 NUM_CLASSES=$1
+N=$4
+s=$2
 
 echo "
 [net]
@@ -630,6 +632,10 @@ size=1
 stride=1
 pad=1
 activation=leaky
+
+[masksembles]
+N=$N
+s=$s
 
 [upsample]
 stride=2
