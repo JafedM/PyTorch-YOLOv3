@@ -5,6 +5,8 @@ build
 *.egg-info
 dist
 output/
+output_yolov3/
+output_mask/
 data/*
 backup
 weights/*.weights
