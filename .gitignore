@@ -7,6 +7,7 @@ dist
 output/
 output_yolov3/
 output_mask/
+mask_weights/
 data/*
 backup
 weights/*.weights
