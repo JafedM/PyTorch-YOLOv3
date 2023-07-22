@@ -223,7 +223,7 @@ class Darknet(nn.Module):
         img_size = x.size(2)
         layer_outputs, yolo_outputs = [], []
         for i, (module_def, module) in enumerate(zip(self.module_defs, self.module_list)):
-            if module_def["type"] in ["convolutional", "upsample", "maxpool"]:
+            if module_def["type"] in ["convolutional", "upsample", "maxpool", "masksembles"]:
                 x = module(x)
             elif module_def["type"] == "route":
                 combined_outputs = torch.cat([layer_outputs[int(layer_i)] for layer_i in module_def["layers"].split(",")], 1)
