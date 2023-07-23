@@ -20,11 +20,19 @@ poetry install
 You need to join the virtual environment by running `poetry shell` in this directory before running any of the following commands without the `poetry run` prefix.
 Also have a look at the other installing method, if you want to use the commands everywhere without opening a poetry-shell.
 
-#### Download pretrained weights
+#### Download base pretrained weights
 
 ```bash
 ./weights/download_weights.sh
 ```
+
+### Download Mask weights
+
+```
+https://drive.google.com/drive/folders/1ymhUkBXRlTk0ka1x5Aodtjx-3-FgAIZ2?usp=sharing
+```
+
+Place them in foldern named  checkpoints.
 
 #### Download COCO
 
@@ -52,31 +60,16 @@ To download this dataset as well as weights, see above.
 poetry run yolo-test --weights weights/yolov3.weights
 ```
 
-| Model                   | mAP (min. 50 IoU) |
-| ----------------------- |:-----------------:|
-| YOLOv3 608 (paper)      | 57.9              |
-| YOLOv3 608 (this impl.) | 57.3              |
-| YOLOv3 416 (paper)      | 55.3              |
-| YOLOv3 416 (this impl.) | 55.5              |
 
 ## Inference
-Uses pretrained weights to make predictions on images. Below table displays the inference times when using as inputs images scaled to 256x256. The ResNet backbone measurements are taken from the YOLOv3 paper. The Darknet-53 measurement marked shows the inference time of this implementation on my 1080ti card.
-
-| Backbone                | GPU      | FPS      |
-| ----------------------- |:--------:|:--------:|
-| ResNet-101              | Titan X  | 53       |
-| ResNet-152              | Titan X  | 37       |
-| Darknet-53 (paper)      | Titan X  | 76       |
-| Darknet-53 (this impl.) | 1080ti   | 74       |
+Uses pretrained weights to make predictions on images.
 
 ```bash
 poetry run yolo-detect --images data/samples/
 ```
 
-<p align="center"><img src="https://github.com/eriklindernoren/PyTorch-YOLOv3/raw/master/assets/giraffe.png" width="480"\></p>
-<p align="center"><img src="https://github.com/eriklindernoren/PyTorch-YOLOv3/raw/master/assets/dog.png" width="480"\></p>
-<p align="center"><img src="https://github.com/eriklindernoren/PyTorch-YOLOv3/raw/master/assets/traffic.png" width="480"\></p>
-<p align="center"><img src="https://github.com/eriklindernoren/PyTorch-YOLOv3/raw/master/assets/messi.png" width="480"\></p>
+An example of use is in pytorchyolo\YoloMask demo.ipynb
+
 
 ## Train
 For argument descriptions have a look at `poetry run yolo-train --help`
