@@ -32,7 +32,7 @@ Also have a look at the other installing method, if you want to use the commands
 https://drive.google.com/drive/folders/1ymhUkBXRlTk0ka1x5Aodtjx-3-FgAIZ2?usp=sharing
 ```
 
-Place them in foldern named  checkpoints.
+Create and checkpoints folder an place them there.
 
 #### Download COCO
 
