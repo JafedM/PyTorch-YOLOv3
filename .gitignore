@@ -14,6 +14,7 @@ weights/*.weights
 weights/*.conv.*
 __pycache__
 checkpoints/
+names.ipynb
 
 .vscode/
 logs/

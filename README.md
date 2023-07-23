@@ -1,5 +1,5 @@
-# PyTorch YOLO
-A minimal PyTorch implementation of YOLOv3, with support for training, inference and evaluation.
+# PyTorch YOLO Mask
+A modification of PyTorch YOLO using Masksembles.
 
 YOLOv4 and YOLOv7 weights are also compatible with this implementation.
 
